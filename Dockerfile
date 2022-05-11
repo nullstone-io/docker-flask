@@ -21,4 +21,4 @@ ENV PORT 80
 ENV BINDING "0.0.0.0:80"
 ENV WSGI_APP app:app
 
-CMD gunicorn -c /gunicorn.conf.py
+CMD ["gunicorn", "-c /gunicorn.conf.py"]

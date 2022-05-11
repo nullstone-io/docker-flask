@@ -15,6 +15,6 @@ ENTRYPOINT ["/local.entrypoint.sh"]
 WORKDIR /app
 
 EXPOSE 9000
-ENV PORT 9000
+ENV FLASK_RUN_PORT 9000
 
-CMD flask run --host=0.0.0.0 --port=9000
+CMD ["flask", "run", "--host=0.0.0.0"]
