@@ -1,7 +1,5 @@
 build:
-	docker build -t nullstone/flask:local -f local.Dockerfile .
-	docker build -t nullstone/flask .
+	docker buildx bake -f docker-bake.hcl
 
 push:
-	docker push nullstone/flask:local
-	docker push nullstone/flask
+	docker buildx bake --push -f docker-bake.hcl
